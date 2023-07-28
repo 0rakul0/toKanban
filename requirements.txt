@@ -1,0 +1,17 @@
+﻿charset-normalizer==2.1.0
+gunicorn==20.1.0
+idna==3.3
+lxml==4.9.1
+multitasking==0.0.11
+numpy
+pandas
+python-dateutil==2.8.2
+pytz==2022.1
+six==1.16.0
+sniffio==1.2.0
+typing_extensions==4.3.0
+urllib3==1.26.11
+uvicorn==0.18.2
+fastapi==0.79.0
+openpyxl==3.0.10
+matplotlib
