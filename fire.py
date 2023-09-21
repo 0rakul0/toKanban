@@ -22,32 +22,32 @@ dados = {
     "user":'0rakul0'
 }
 
-requisicao_mensagem = requests.post(f'{link}/lista/.json', data=json.dumps(dados))
-print(requisicao_mensagem)
-print(requisicao_mensagem.text)
+"""create"""
+# requisicao_mensagem = requests.post(f'{link}/lista/.json', data=json.dumps(dados))
+# print(requisicao_mensagem)
+# print(requisicao_mensagem.text)
 
-
+"""get"""
 # metodo get por bloco vendedores
 requisicao = requests.get(f'{link}/lista/.json')
 dicio_link = requisicao.json()
 print(dicio_link)
 
-
-# metodo get por bloco produtos
+""" update"""
+# metodo para atualizar pacth
 requisicao = requests.get(f'{link}/lista/.json')
 dic_requisicao = requisicao.json()
 id_item = None
 for item in dic_requisicao:
     id_item = item
 
-# metodo para atualizar pacth
 dados = {"mensagem": "mensagem atualizada", "atualizada_em":data_update}
 requisicao = requests.patch(f'{link}/lista/{id_item}/.json', data=json.dumps(dados))
 print(requisicao.text)
 
-
+""" deletar"""
 # Deletar uma venda (DELETE)
-requisicao = requests.delete(f'{link}/lista/{id_item}/.json')
-print(requisicao)
-print(f"id apagado: {id_item}")
-print(requisicao.text)
+# requisicao = requests.delete(f'{link}/lista/{id_item}/.json')
+# print(requisicao)
+# print(f"id apagado: {id_item}")
+# print(requisicao.text)
